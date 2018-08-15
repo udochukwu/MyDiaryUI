@@ -65,13 +65,15 @@
                 <div class="modal-body ">
                     <span class="cls" id="loginClsBtn">&times;</span>                    
                     <div class="">
-                        <form  action="account/index.html">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required>
+                        <form id="loginForm" action="account/index.html">
+                            <div id="loginError" class="alert alert-error d-none">Error here</div>
+                            <div id="loginSuccess" class="alert alert-success d-none">Success here</div>
+                            <label for="loginEmail"><b>Email Address</b></label>
+                            <input type="text" placeholder="Enter Email Address" id="loginEmail" name="loginEmail" required>
                     
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required> 
-                            <button  id="modalLoginBtn" type="submit"   value="login" ><h4>Login</h4></button> 
+                            <label for="loginPassword"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" id="loginPassword" name="loginPassword" required> 
+                            <button  id="modalLoginBtn" type="submit"   value="login" ><h4 id="logText">Login</h4></button> 
                             <div>
                                 <div class="" style="float:right;" >
                                     <span ><a href="#">Forgot Password?</a></span>
@@ -116,5 +118,6 @@
       <!-- My Javascript -->
       <script src="js/index.js"></script>
       <script src="js/signup.js"></script>
+      <script src="js/login.js"></script>
     </body>
 </html>
