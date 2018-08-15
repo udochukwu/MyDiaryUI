@@ -21,6 +21,13 @@
         <title>My Diary</title>
     </head>
     <body>
+        <!-- loader /- -->
+        <div id="loader-div" style="display:none; position:fixed; top:0px; opacity:0.8;left:0px; width:100%; height:100%; background:#000000; z-index:9999999999999999;">
+            <div style="display:flex; justify-content:center; align-items: center; height:100%; width:100%;"> 
+                <img id="loader" height="50" width="50" class="img-fluid" src="loader.gif">
+            </div>                        
+        </div>
+
         <!-- Register Modal -->
         <div id="registerModal" class="my_modal">
             <!-- Modal content -->
@@ -28,16 +35,18 @@
                 <div class="modal-body ">
                         <span class="cls" id="registerClsBtn">&times;</span>                    
                   <div class="">
-                      <form action="account/index.html">
+                      <form id="signupForm" action="account/index.html">
+                          <div id="signupError" class="alert alert-error d-none">Error here</div>
+                          <div id="signupSuccess" class="alert alert-success d-none">Success here</div>
                           <label for="uname"><b>Email</b></label>
-                          <input type="email" placeholder="Enter Email" name="email" required>
+                          <input type="text" placeholder="Enter Email" id="email" name="email" >
                     
                           <label for="psw"><b>Password</b></label>
-                          <input type="password" placeholder="Enter Password" name="passworld" required> 
+                          <input type="password" placeholder="Enter Password" id="password" name="password"> 
 
                           <label for="psw"><b>Confirm Password</b></label>
-                          <input type="password" placeholder="Re-Enter Password" name="confirm_password" required>
-                          <button  id="modalLoginBtn" type="submit"   value="login" ><h4>Register</h4></button> 
+                          <input type="password" placeholder="Re-Enter Password" id="confirmPassword" name="confirmPassword">
+                          <button  id="modalLoginBtn" type="submit"   value="login" ><h4 id="regText">Register</h4></button> 
                           <div>
                               <label>
                                   <input type="checkbox" checked="checked" name="remember">I agree to the </label><a href="#">Terms of Service</a>
@@ -106,5 +115,6 @@
         </div>
       <!-- My Javascript -->
       <script src="js/index.js"></script>
+      <script src="js/signup.js"></script>
     </body>
 </html>
