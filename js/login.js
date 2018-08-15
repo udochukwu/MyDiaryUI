@@ -3,18 +3,18 @@ let loginForm = document.getElementById("loginForm");
 loginForm.onsubmit = function(event) {
     // regForm.encoding = "application/x-www-form-urlencoded";
     event.preventDefault();
-    regText.innerHTML = 'please Wait..';
+    logText.innerHTML = 'please Wait..';
     loginError.style.display = "none";
     loginSuccess.style.display = "none";
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+    let email = document.getElementById("loginEmail").value;
+    let password = document.getElementById("loginPassword").value;
 
     let details = {email, password};
     console.log(details);
 
     const loginUser = (details) => {
-    // const url = 'https://nelson-diary.herokuapp.com/api/v1/auth/login';
-    const url = 'http://localhost:8000/api/v1/auth/login';
+    const url = 'https://nelson-diary.herokuapp.com/api/v1/auth/login';
+    // const url = 'http://localhost:8000/api/v1/auth/login';
     fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json; charset=utf-8' }, body: JSON.stringify(details) })
     .then((response) => {
         return response.json();
