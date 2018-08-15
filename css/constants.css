@@ -362,3 +362,6 @@
     align-items: center;
     justify-content: center;
   }
+  .d-none{
+    display:none;
+  }

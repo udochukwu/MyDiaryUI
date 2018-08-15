@@ -92,6 +92,23 @@ nav a {
     opacity: 1;
     right: 0;
 }
+.alert{
+    position: relative;
+    /* padding: 10px 15px; */
+    margin-bottom: 0.3rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert-success {
+    color: #0a3001;
+    background-color: #b7f2a7;
+    border-color: #80ce6b;
+}
 footer{
     border-top:1px solid rgba(97, 95, 95, 0.31);
     /* position:absolute;
