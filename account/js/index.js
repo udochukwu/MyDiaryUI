@@ -1,4 +1,5 @@
 window.onload = function() {
+    let editBtn = document.getElementById("editBtn");   
 
     //Hide side bar on click
     navClsBtn.onclick = function(e) {
