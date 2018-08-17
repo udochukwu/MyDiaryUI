@@ -1,5 +1,4 @@
 const token = localStorage.getItem('token');
-// const token = 'tokedfdfdsgthrtvburbh67ubhjo876hj9j6756n';
 
 console.log(token);
 const fetchEntryById = (token) => {
@@ -27,11 +26,14 @@ const fetchEntryById = (token) => {
             document.getElementById('dateTime').innerHTML = dateTime;
 
         }else{
-            document.getElementById('body').innerHTML = "UNAUTHOIZED ACCESS";
+            // document.getElementById('body').innerHTML = "UNAUTHOIZED ACCESS";
+
         }
     }).catch( (err) => {
         console.log('Request failed', err);
         // regText.innerHTML = 'Login';
     });
-    };
-    fetchEntryById(token);
+};
+fetchEntryById(token);
+
+
