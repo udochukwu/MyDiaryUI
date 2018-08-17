@@ -3,8 +3,8 @@ const token = localStorage.getItem('token');
 
 console.log(token);
 const fetchAllEntries = (token) => {
-    const url = 'https://nelson-diary.herokuapp.com/api/v1/entries';
-    // const url = 'http://localhost:8000/api/v1/entries';
+    // const url = 'https://nelson-diary.herokuapp.com/api/v1/entries';
+    const url = 'http://localhost:8000/api/v1/entries';
     fetch(url, { method: 'GET', headers: { 'x-access-token':token,'Content-Type': 'application/json; charset=utf-8' }})
     .then((response) => {
         return response.json();

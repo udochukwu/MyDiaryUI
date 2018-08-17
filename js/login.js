@@ -13,8 +13,8 @@ loginForm.onsubmit = function(event) {
     console.log(details);
 
     const loginUser = (details) => {
-    const url = 'https://nelson-diary.herokuapp.com/api/v1/auth/login';
-    // const url = 'http://localhost:8000/api/v1/auth/login';
+    // const url = 'https://nelson-diary.herokuapp.com/api/v1/auth/login';
+    const url = 'http://localhost:8000/api/v1/auth/login';
     fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json; charset=utf-8' }, body: JSON.stringify(details) })
     .then((response) => {
         return response.json();
