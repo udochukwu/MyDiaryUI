@@ -26,8 +26,8 @@ saveBtn.onclick = function(e) {
     const url_string = window.location.href;
     const link = new URL(url_string);
     const entryId  = link.searchParams.get("entryId");
-    // const url = 'https://nelson-diary.herokuapp.com/api/v1/entries';
-    const url = 'http://localhost:8000/api/v1/entries';
+    const url = 'https://nelson-diary.herokuapp.com/api/v1/entries';
+    // const url = 'http://localhost:8000/api/v1/entries';
     fetch(url, { method: 'POST', headers: { 'x-access-token':token,'Content-Type': 'application/json; charset=utf-8'  }, body: JSON.stringify(details) })
     .then((response) => {
         return response.json();

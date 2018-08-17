@@ -8,8 +8,8 @@ const fetchEntryById = (token) => {
     const entryId  = link.searchParams.get("entryId");
     console.log(entryId);
 
-    // const url = `https://nelson-diary.herokuapp.com/api/v1/entries/${entryId}`;
-    const url = `http://localhost:8000/api/v1/entries/${entryId}`;
+    const url = `https://nelson-diary.herokuapp.com/api/v1/entries/${entryId}`;
+    // const url = `http://localhost:8000/api/v1/entries/${entryId}`;
     fetch(url, { method: 'GET', headers: { 'x-access-token':token,'Content-Type': 'application/json; charset=utf-8' }})
     .then((response) => {
         return response.json();
