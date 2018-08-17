@@ -58,10 +58,11 @@
         <section class="row">
             <div class="new-entry bg-white u-py-5 u-my-5 ">
                 <form class="" >
-                    <input type="text" class="title" placeholder="Entry Title"autofocus required>
+                    <input type="text" class="title" id="entryTitle" placeholder="Entry Title"autofocus required>
                     <h4 class="date"><i class="far fa-calendar-alt"></i> Fri Aug 3 2018</h4>
-                    <textarea rows="4" cols="50" placeholder="Entry Here"></textarea>
-                    <button class="btn u-mt-3" type="submit" value="Save Entry"><i class="far fa-save"></i> Save Entry</button>
+                    <textarea rows="4" cols="50" id="entryContent" placeholder="Entry Here"></textarea>
+                    <button id="editBtn" class="btn u-mt-3  u-d-none" type="submit" value="Save Entry"><i class="far fa-edit"></i> Edit</button>
+                    <button id="saveBtn" class="btn u-mt-3" type="submit" value="Save Entry"><i class="far fa-save"></i> <span id="saveBtnText">Save</span></button>
                 </form> 
             </div>
         </section>
@@ -72,5 +73,6 @@
         </footer>
       <!-- My Javascript -->
       <script src="js/index.js"></script>
+      <script src="js/newEntry.js"></script>
     </body>
 </html>
