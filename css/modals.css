@@ -1,8 +1,34 @@
+
+/* The Modal (background) */
+.success_modal {
+	display: none;
+	position: fixed; /* Stay in place */
+	z-index: 999999999999999; /* Sit on top */
+	left: 0;
+	top: 0px;
+	width: 100%; /* Full width */
+	overflow: auto; /* Enable scroll if needed */
+}
+.success_modal div{
+	width: 150px; /* Full width */
+	margin-left:auto;
+    margin-right:auto;	
+	padding: 10px 15px;
+	border: 2px solid transparent;
+	border-radius: 0.25rem;
+	overflow: auto; /* Enable scroll if needed */
+	color: #fff;
+    background-color: #075e12;
+	border-color: #63ac6ce5;
+	margin-top: 5px;
+	animation-name: animatezoom;
+	animation-duration: 0.4s
+}
 /* The Modal (background) */
 .my_modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
-	z-index: 9999999999; /* Sit on top */
+	z-index: 99999999; /* Sit on top */
 	left: 0;
 	top: 0px;
 	width: 100%; /* Full width */

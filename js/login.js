@@ -23,9 +23,14 @@ loginForm.onsubmit = function(event) {
         if(data.success){
             if (typeof(Storage) !== "undefined") {
                 localStorage.setItem("token",data.token);
-                loginSuccess.innerHTML = 'Redirecting.....';
-                loginSuccess.style.display = "block";
-                window.location.replace('account/index.html'); 
+                // loginSuccess.innerHTML = 'Redirecting.....';
+                // loginSuccess.style.display = "block";
+                success_text.innerHTML = 'Redirecting.....';
+                success_modal.style.display = 'block';
+                const redirect_to_dashboard = ()=>{
+                    window.location.replace('account/index.html');                    
+                }
+                setTimeout(redirect_to_dashboard, 2000);
             } else {
                 loginError.innerHTML = 'Sorry! No Web Storage support';
                 loginError.style.display = "block";
@@ -43,19 +48,10 @@ loginForm.onsubmit = function(event) {
             loginError.innerHTML = errorList;
             loginError.style.display = "block";
         }
-        loader.style.display = "none";
     }).catch( (err) => {
         console.log('Request failed', err);
         regText.innerHTML = 'Login';
     });
     };
     loginUser(details);
-
-    // When the user clicks anywhere outside of the modal, close the modals
-    window.onclick = function(event) {
-        if (event.target == loginModal) {
-            registerModal.style.display = "block";
-        }
-    } 
-
 }
